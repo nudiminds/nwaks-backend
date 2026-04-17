@@ -13,7 +13,7 @@ const eventSchema = new mongoose.Schema(
   },
 
   date: {
-    type: Date,
+    type: String, // Stored as "YYYY-MM-DD"
     required: true
   },
 

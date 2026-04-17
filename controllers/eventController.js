@@ -18,7 +18,7 @@ export const getUpcomingEvents = async (req, res) => {
 
   try {
 
-    const today = new Date()
+    const today = new Date().toISOString().split("T")[0]
 
     const events = await Event.find({
       date: { $gte: today }
@@ -36,7 +36,7 @@ export const getPastEvents = async (req, res) => {
 
   try {
 
-    const today = new Date()
+    const today = new Date().toISOString().split("T")[0]
 
     const events = await Event.find({
       date: { $lt: today }
