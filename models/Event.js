@@ -22,7 +22,8 @@ const eventSchema = new mongoose.Schema(
     kn: String
   },
 
-  image: String
+  image: String,
+  link: String
 },
 { timestamps: true }
 );
